@@ -72,6 +72,19 @@ intensities by the heavy-ion synchrotron SIS-100, and in a future stage
 by the SIS-300 machine of the Facility for Anti-proton and Ion Research
 (FAIR) at GSI, Darmstadt, Germany.
 
+%%%%%%%
+% Picture - STS
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.24\textwidth]{ywu-STS}
+	\includegraphics[width=0.24\textwidth]{ywu-readout}
+	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
+		stations with the support frame (left) and a quarter station with
+		ladders and FEE readout (right)}
+	\label{ywu:fig:sts}
+\end{figure}
+
 \subsection{Silicon Tracking System}
 Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
 
@@ -81,10 +94,22 @@ of the high multiplicities of charged particles originating from high-rate
 beam-target interactions. The silicon microstrip detectors must be
 radiation hard and are read out by a fast self triggering front-end
 electronics.
+% TODO : Add more details of geometry and performance parameters.
+
+%%%%%%%
+% Picture - QTC
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{ywu-sensor}
+	\caption{Segmentation of the micro-strip sensors (left), and prototype 
+		of a read-out sector (right)}
+	\label{ywu:fig:sensor}
+\end{figure}
 
 \subsection{Quality Test Center}
-Motivation program of QA. Task and condition in QTC
-
+% Motivation program of QA. Task and condition in QTC
+% TODO : Simplify and move some details to QA section
 Due to a large-scale sensor production, the effective QA of sensors can be
 achieved by a collective effort among the Quality Test Centers. [Figure]
 indicates the variety of quality assurance tests and the corresponding QTC
@@ -118,10 +143,37 @@ between the strip implant and the readout strip (so-called ``pinholes''), short
 circuits between two or more readout strips, and strips exhibiting high leakage
 current.
 
+%%%%%%%
+% Picture - QTC
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{ywu-QTC}
+	\caption{General view of the QA platform in GSI cleanroom.}
+	\label{ywu:fig:qtc}
+\end{figure}
+
 \section{Hardware and Setup}
-\subsection{Testing conditions}
-\subsection{Storage conditions}
-\subsection{Equipment and testing tools/devices}
+% Testing and storage conditions, equipments and devices
+\begin{itemize}
+	\item S\"uss PA300PS probe station, featuring 1 $\mu m$ movement precision
+	in XYZ direction and a chuck rotation option of $\pm 7.5^{\circ}$, is itself 
+	equipped with a ProberBench PC hosting the GUI operating system;
+	
+	\item Keithley 2410 SourceMeter unit (SMU) providing high-voltage up to
+	$\pm$ 1100 V and current resolution of 10 pA;
+	
+	\item Keithley 6487 picoammeter/voltage source having a 2 nA - 20 mA current
+	range and a high-resolution voltage source up to 505 V;
+	
+	\item QuadTech 7600 precision LCR-meter with customized external biasing up to
+	500 V, wide frequency range from 100 Hz to 2 MHz, 0.05 \% measurement
+	accuracy, programmable test voltage and current;
+	
+	\item Keithley 708B switching matrix (multiplexer) mainframe with a high-voltage
+	(up to 1100 V) switching card (Keithley 7072-HV) for automation of the
+	measurements (discussed in Chapter 5).
+\end{itemize}
 
 \section{Quality Assurance in GSI}
 \subsection{Optical Inspection}
