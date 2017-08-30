@@ -181,12 +181,26 @@ current.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
-	\caption{Probe setup for strip current and interstrip capacitance measurement. Four
-		needles contacts the AC and DC pads.}
+	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
+		test. Four probe needles contacts the neighboring AC or DC pads.}
 	\label{ywu:fig:needle}
 \end{figure}
 
+%%%%%%%
+% Picture - Probe needle setup
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-qa}
+	\caption{Quality assurance procedures in GSI}
+	\label{ywu:fig:qa}
+\end{figure}
+
 \section{Quality Assurance in GSI}
+Quality assurance for silicon sensor includes visual tests on arrival, control and
+distribution to testing centers, verification of specifications via tests and central
+database for keeping track of sensor response.
+
 \subsection{Optical Inspection}
 \subsection{Electrical Inspection}
 
@@ -202,7 +216,48 @@ current.
 
 \section{QA Database}
 \subsection{FairDB}
-\subsection{Some Results}
+\subsection{Strip Test}
+
+%%%%%%%%
+% Table - Data scheme for strip test
+%%%%%%%%
+\begin{table}[t]
+	\centering
+	\begin{tabular}{|c|p{100pt}|}
+		\hline
+		\textbf{Strip table} & \textbf{Description} \\
+		
+		\hline
+		unique ID    & Generated with sensor info\\
+		
+		\hline
+		edge & P or N side\\
+		
+		\hline
+		strip ID & Numbering by rule, short strips included \\
+		
+		\hline
+		I\_strip, A & Strip leakage current \\
+		
+		\hline
+		pinhole, A & Current between implant and aluminum readout line\\
+				
+		\hline
+		Al\_Short\_L, A & Current between this and its neighboring left strips\\
+		
+		\hline
+		Al\_Short\_R, A & Current between this and its neighboring right strips \\
+		
+		\hline
+		CCoupling\_Cp, F & Capacitance between AC and DC pad \\
+		
+		\hline
+		CCoupling\_DF, F & Deflection factor between AC and DC pad \\
+				
+		\hline
+	\end{tabular}
+	\caption{Strip test data scheme} 
+\end{table}
 
 %%%%%%%
 % Picture - Data in SQL database
