@@ -154,6 +154,7 @@ current.
 \end{figure}
 
 \section{Hardware and Setup}
+\label{ywu:sec:setup}
 % Testing and storage conditions, equipments and devices
 \begin{itemize}
 	\item S\"uss PA300PS probe station, featuring 1 $\mu m$ movement precision
@@ -238,13 +239,29 @@ ROOT Library.\\
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
 different lists of sensor features indexed via the sensor unique id (see 
 Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
-map and QA results \cite{ywu:ob}. For strip diagnostic tests, the information on identified defect
-will be stored, which was shown in Tab. \ref{ywu:table:strip}. All parameter classed
-are compatible with the FairRoot framework scheme and could be used for
-the data analysis \cite{ywu:fr}.
+map and QA results \cite{ywu:ob}. For strip diagnostic tests, the information on 
+identified defect will be stored, which was shown in Tab. \ref{ywu:table:strip}. All 
+parameter classed are compatible with the FairRoot framework scheme and could be used 
+for the data analysis \cite{ywu:fr}.
 
 \subsection{Application}
+An implementation of the STS QA database and its web interface based on FairDB is
+ available now. It stores information on sensor parameters and quality assurance results
+ as well ass tracking information for logistic purpose.\\
 
+The FairDB will be used to store a large number of sensor parameters. These information
+ is used to make decision on defect severity in order to accept or reject a sensor under
+ test for future use in STS detector. In order to extract the information on the strip
+ properties, strip diagnostic tests will be performed. All of the parameters could be
+ measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:setup}).
+ For example, we can check the parameters with acceptance criteria which determines the
+ strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
+ of all the strip in a sensor's one side. It provides visual result and makes it more
+ intuitively to find defective strip.\\
+ 
+A central database is also important for tracking the shipment of sensors and other components
+ between institutions during their lifetime. The FairDB data scheme contains, among others,
+ the tables and structures for these logistic purpose.   
 
 %%%%%%%%
 % Table - Data scheme for strip test
@@ -281,7 +298,10 @@ the data analysis \cite{ywu:fr}.
 		
 		\hline
 		CCoupling\_DF, F & Deflection factor between AC and DC pad \\
-				
+		
+		\hline
+		Passed, Boolean & Check parameters with acceptance criteria.\\
+		
 		\hline
 	\end{tabular}
 	\caption{Strip test data scheme}
