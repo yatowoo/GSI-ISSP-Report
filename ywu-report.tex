@@ -111,7 +111,7 @@ electronics.
 % Motivation program of QA. Task and condition in QTC
 % TODO : Simplify and move some details to QA section
 Due to a large-scale sensor production, the effective QA of sensors can be
-achieved by a collective effort among the Quality Test Centers. [Figure]
+achieved by a collective effort among the Quality Test Centers. Fig. \ref{ywu:fig:qa}
 indicates the variety of quality assurance tests and the corresponding QTC
 in charge. The overall QA program can be represented as a combination of
 tests performed on sensor and strip level.
@@ -214,9 +214,37 @@ database for keeping track of sensor response.
 	\label{ywu:fig:defect}
 \end{figure}
 
+%%%%%%%
+% Picture - Optical surface scratch (defect)
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-stsdb}
+	\caption{Example detection of a scratch as seen in direct light source.}
+	\label{ywu:fig:stsdb}
+\end{figure}
+
 \section{QA Database}
-\subsection{FairDB}
-\subsection{Strip Test}
+The CBM STS quality assurance (QA) database will gather into one repository
+all relevant measurements obtained during the STS sensors tests performed by
+the STS QA responsible laboratories. Any new or updated results will be stored
+in a dedicated database and can then be directly accessed form any location either
+a web interface or ROOT macro.
+
+\subsection{Design}
+All new STS QA measurements as well as their history should be recorded. For this
+purpose the STS QA database is implemented using FairDB SQL Interface based on
+ROOT Library.\\
+A main sensor table is mapped to a ROOT based QA parameter manager which holds
+different lists of sensor features indexed via the sensor unique id (see 
+Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
+map and QA results \cite{ywu:ob}. For strip diagnostic tests, the information on identified defect
+will be stored, which was shown in Tab. \ref{ywu:table:strip}. All parameter classed
+are compatible with the FairRoot framework scheme and could be used for
+the data analysis \cite{ywu:fr}.
+
+\subsection{Application}
+
 
 %%%%%%%%
 % Table - Data scheme for strip test
@@ -256,7 +284,8 @@ database for keeping track of sensor response.
 				
 		\hline
 	\end{tabular}
-	\caption{Strip test data scheme} 
+	\caption{Strip test data scheme}
+	\label{ywu:table:strip} 
 \end{table}
 
 %%%%%%%
