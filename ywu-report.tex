@@ -120,7 +120,6 @@ The sensor technology used in STS is required to provide high track reconstructi
 
 \subsection{Quality Test Center}
 % Motivation program of QA. Task and condition in QTC
-% TODO : Simplify and move some details to QA section
 Due to a large-scale sensor production, the effective QA of sensors can be
  achieved by a collective effort among the Quality Test Centers built in GSI
  cleanroom. Fig. \ref{ywu:fig:qa} indicates the variety of quality assurance 
@@ -299,9 +298,9 @@ for the data analysis \cite{ywu:fr}.
 \end{table}
 
 \subsection{Application}
-An implementation of the STS QA database and its web interface based on FairDB is
- available now. It stores information on sensor parameters and quality assurance results
- as well ass tracking information for logistic purpose.
+An implementation of the STS QA database and its web interface (Fig. \ref{ywu:fig:dbweb})
+ based on FairDB is available now. It stores information on sensor parameters and quality
+ assurance results as well ass tracking information for logistic purpose.
 
 The FairDB will be used to store a large number of sensor parameters. These information
  is used to make decision on defect severity in order to accept or reject a sensor under
@@ -328,13 +327,13 @@ A central database is also important for tracking the shipment of sensors and ot
 \end{figure}
 
 %%%%%%%
-% Picture - Data in SQL database
+% Picture - Data query with FairDB web interface
 %%%%%%%
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-dbdata}
-	\caption{Snapshot of STS~QA data in SQL database.}
-	\label{ywu:fig:dbdata}
+	\includegraphics[width=0.45\textwidth]{fig/ywu-dbweb}
+	\caption{Snapshot of STS~QA web interface.}
+	\label{ywu:fig:dbweb}
 \end{figure}
 
 \section{Summary}
