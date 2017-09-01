@@ -64,37 +64,48 @@
 
 \section{Introduction}
 The Compressed Baryonic Matter (CBM) experiment will carry out
-systematic research on the properties of nuclear matter under extreme conditions,
-in particular, at highest net baryon densities. These conditions will
-be met by colliding beams of heavy ions on targets in the energy range from
-2 to 14, eventually 45 GeV/nucleon, as they will be provided with highest
-intensities by the heavy-ion synchrotron SIS-100, and in a future stage
-by the SIS-300 machine of the Facility for Anti-proton and Ion Research
-(FAIR) at GSI, Darmstadt, Germany.
+ systematic research on the properties of nuclear matter under extreme conditions,
+ in particular, at highest net baryon densities. These conditions will
+ be met by colliding beams of heavy ions on targets in the energy range from
+ 2 to 14, eventually 45 GeV/nucleon, as they will be provided with highest
+ intensities by the heavy-ion synchrotron SIS-100, and in a future stage
+ by the SIS-300 machine of the Facility for Anti-proton and Ion Research
+ (FAIR) at GSI, Darmstadt, Germany.
 
 %%%%%%%
 % Picture - STS
 %%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.24\textwidth]{fig/ywu-STS}
-	\includegraphics[width=0.24\textwidth]{fig/ywu-readout}
-	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
-		stations with the support frame (left) and a quarter station with
-		ladders and FEE readout (right)}
-	\label{ywu:fig:sts}
-\end{figure}
+%
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width=0.24\textwidth]{fig/ywu-STS}
+%	\includegraphics[width=0.24\textwidth]{fig/ywu-readout}
+%	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
+%		stations with the support frame (left) and a quarter station with
+%		ladders and FEE readout (right)}
+%	\label{ywu:fig:sts}
+%\end{figure}
 
 \subsection{Silicon Tracking System}
 %Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
 
 The Silicon Tracking System (STS) is the central detector fo the CBM
-experiment at FAIR. Its task is the standalone trajectory reconstruction
-of the high multiplicities of charged particles originating from high-rate
-beam-target interactions. The silicon microstrip detectors must be
-radiation hard and are read out by a fast self triggering front-end
-electronics.
-% TODO : Add more details of geometry and performance parameters.
+ experiment at FAIR. Its task is the standalone trajectory reconstruction
+ of the high multiplicities of charged particles originating from high-rate
+ beam-target interactions. The silicon microstrip detectors must be
+ radiation hard and are read out by a fast self triggering front-end electronics.
+
+The sensor technology used in STS is required to provide high track reconstruction
+ efficiency as well as low material mass. Double-sided, 300 $\mu m$ thick
+ microstrip sensor with a second metalization layer were chosen due to the fact that
+ they yield the same space-point determination resolution using only half the amount
+ of silicon material compared to single-sided sensors. The geometry design of STS
+ sensor is illustrated in Fig. \ref{ywu:fig:sensor}. There are 1024 micro strips in
+ each layer. Between the ''p'' and ''n'' side strip orientation of the sensor, there
+ is a stereo angle of 7.5$^{\circ}$ in order to readout in one direction which reduce
+ space for installation. For final design, a family of sensors will be employed, which
+ are realized in four discrete sizes, $6.2\times 2.2,~6.2\times 4.2,~6.2\times 6.2$ 
+ and $6.2\times 12.4~cm^{2}$.
 
 %%%%%%%
 % Picture - QTC
@@ -111,10 +122,10 @@ electronics.
 % Motivation program of QA. Task and condition in QTC
 % TODO : Simplify and move some details to QA section
 Due to a large-scale sensor production, the effective QA of sensors can be
-achieved by a collective effort among the Quality Test Centers. Fig. \ref{ywu:fig:qa}
-indicates the variety of quality assurance tests and the corresponding QTC
-in charge. The overall QA program can be represented as a combination of
-tests performed on sensor and strip level.
+ achieved by a collective effort among the Quality Test Centers built in GSI
+ cleanroom. Fig. \ref{ywu:fig:qa} indicates the variety of quality assurance 
+ tests and the corresponding QTC in charge. The overall QA program can be represented
+ as a combination of tests performed on sensor and strip level.
 
 %%%%%%%
 % Picture - QTC
@@ -122,7 +133,7 @@ tests performed on sensor and strip level.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-QTC}
-	\caption{General view of the QA platform in GSI cleanroom.}
+	\caption{General view of the Quality Test Center (QTC) in GSI cleanroom.}
 	\label{ywu:fig:qtc}
 \end{figure}
 
@@ -150,18 +161,7 @@ tests performed on sensor and strip level.
 \end{itemize}
 
 %%%%%%%
-% Picture - Probe needle setup
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
-	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
-		test. Four probe needles contacts the neighboring AC or DC pads.}
-	\label{ywu:fig:needle}
-\end{figure}
-
-%%%%%%%
-% Picture - Probe needle setup
+% Picture - QA procedures
 %%%%%%%
 \begin{figure}[htb]
 	\centering
@@ -174,6 +174,16 @@ tests performed on sensor and strip level.
 Quality assurance for silicon sensor includes visual tests on arrival, control and
 distribution to testing centers, verification of specifications via tests and central
 database for keeping track of sensor response.
+
+%%%%%%%
+% Picture - Optical surface scratch (defect)
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-defect}
+	\caption{Example detection of a scratch as seen in direct light source.}
+	\label{ywu:fig:defect}
+\end{figure}
 
 \paragraph{Optical inspection} is intended to identify any kinds of surface
 defects. This test will be performed on 100\% of the sensors at the EKU
@@ -203,22 +213,23 @@ circuits between two or more readout strips, and strips exhibiting high leakage
 current.
 
 %%%%%%%
-% Picture - Optical surface scratch (defect)
+% Picture - Probe needle setup
 %%%%%%%
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-defect}
-	\caption{Example detection of a scratch as seen in direct light source.}
-	\label{ywu:fig:defect}
+	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
+	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
+		test. Four probe needles contacts the neighboring AC or DC pads.}
+	\label{ywu:fig:needle}
 \end{figure}
 
 %%%%%%%
-% Picture - Optical surface scratch (defect)
+% Picture - CBM STS data scheme
 %%%%%%%
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-stsdb}
-	\caption{Example detection of a scratch as seen in direct light source.}
+	\caption{Quality assurance data scheme.}
 	\label{ywu:fig:stsdb}
 \end{figure}
 
@@ -241,25 +252,6 @@ map and QA results \cite{ywu:ob}. For strip diagnostic tests, the information on
 identified defect will be stored, which was shown in Tab. \ref{ywu:table:strip}. All 
 parameter classed are compatible with the FairRoot framework scheme and could be used 
 for the data analysis \cite{ywu:fr}.
-
-\subsection{Application}
-An implementation of the STS QA database and its web interface based on FairDB is
- available now. It stores information on sensor parameters and quality assurance results
- as well ass tracking information for logistic purpose.
-
-The FairDB will be used to store a large number of sensor parameters. These information
- is used to make decision on defect severity in order to accept or reject a sensor under
- test for future use in STS detector. In order to extract the information on the strip
- properties, strip diagnostic tests will be performed. All of the parameters could be
- measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:setup}).
- For example, we can check the parameters with acceptance criteria which determines the
- strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
- of all the strip in a sensor's one side. It provides visual result and makes it more
- intuitively to find defective strip.
- 
-A central database is also important for tracking the shipment of sensors and other components
- between institutions during their lifetime. The FairDB data scheme contains, among others,
- the tables and structures for these logistic purpose.   
 
 %%%%%%%%
 % Table - Data scheme for strip test
@@ -284,7 +276,7 @@ A central database is also important for tracking the shipment of sensors and ot
 		
 		\hline
 		pinhole, A & Current between implant and aluminum readout line\\
-				
+		
 		\hline
 		Al\_Short\_L, A & Current between this and its neighboring left strips\\
 		
@@ -306,15 +298,24 @@ A central database is also important for tracking the shipment of sensors and ot
 	\label{ywu:table:strip} 
 \end{table}
 
-%%%%%%%
-% Picture - Data in SQL database
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-dbdata}
-	\caption{Snapshot of STS~QA data in SQL database.}
-	\label{ywu:fig:dbdata}
-\end{figure}
+\subsection{Application}
+An implementation of the STS QA database and its web interface based on FairDB is
+ available now. It stores information on sensor parameters and quality assurance results
+ as well ass tracking information for logistic purpose.
+
+The FairDB will be used to store a large number of sensor parameters. These information
+ is used to make decision on defect severity in order to accept or reject a sensor under
+ test for future use in STS detector. In order to extract the information on the strip
+ properties, strip diagnostic tests will be performed. All of the parameters could be
+ measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:setup}).
+ For example, we can check the parameters with acceptance criteria which determines the
+ strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
+ of all the strip in a sensor's one side. It provides visual result and makes it more
+ intuitively to find defective strip.
+ 
+A central database is also important for tracking the shipment of sensors and other components
+ between institutions during their lifetime. The FairDB data scheme contains, among others,
+ the tables and structures for these logistic purpose.   
 
 %%%%%%%
 % Picture - Result extracted from database, Pinhole
@@ -324,6 +325,16 @@ A central database is also important for tracking the shipment of sensors and ot
 	\includegraphics[width=0.45\textwidth]{fig/ywu-pinhole}
 	\caption{Pinhole scan of silicon microstrips, result extracted from database.}
 	\label{ywu:fig:pinhole}
+\end{figure}
+
+%%%%%%%
+% Picture - Data in SQL database
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-dbdata}
+	\caption{Snapshot of STS~QA data in SQL database.}
+	\label{ywu:fig:dbdata}
 \end{figure}
 
 \section{Summary}
