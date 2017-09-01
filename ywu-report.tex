@@ -232,7 +232,8 @@ a web interface or ROOT macro.
 \subsection{Design}
 All new STS QA measurements as well as their history should be recorded. For this
 purpose the STS QA database is implemented using FairDB SQL Interface based on
-ROOT Library.\\
+ROOT Library.
+
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
 different lists of sensor features indexed via the sensor unique id (see 
 Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
@@ -244,7 +245,7 @@ for the data analysis \cite{ywu:fr}.
 \subsection{Application}
 An implementation of the STS QA database and its web interface based on FairDB is
  available now. It stores information on sensor parameters and quality assurance results
- as well ass tracking information for logistic purpose.\\
+ as well ass tracking information for logistic purpose.
 
 The FairDB will be used to store a large number of sensor parameters. These information
  is used to make decision on defect severity in order to accept or reject a sensor under
@@ -254,7 +255,7 @@ The FairDB will be used to store a large number of sensor parameters. These info
  For example, we can check the parameters with acceptance criteria which determines the
  strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
  of all the strip in a sensor's one side. It provides visual result and makes it more
- intuitively to find defective strip.\\
+ intuitively to find defective strip.
  
 A central database is also important for tracking the shipment of sensors and other components
  between institutions during their lifetime. The FairDB data scheme contains, among others,
