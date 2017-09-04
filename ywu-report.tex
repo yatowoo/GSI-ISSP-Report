@@ -70,7 +70,7 @@ The Compressed Baryonic Matter (CBM) experiment will carry out
  2 to 14, eventually 45 GeV/nucleon, as they will be provided with highest
  intensities by the heavy-ion synchrotron SIS-100, and in a future stage
  by the SIS-300 machine of the Facility for Anti-proton and Ion Research
- (FAIR) at GSI, Darmstadt, Germany.
+ (FAIR) at GSI, Darmstadt, Germany.\cite{ywu:jh}
 
 %%%%%%%
 % Picture - STS
@@ -88,16 +88,14 @@ The Compressed Baryonic Matter (CBM) experiment will carry out
 %Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
 
 The Silicon Tracking System (STS) is the central detector fo the CBM
- experiment at FAIR. Its task is the standalone trajectory reconstruction
+ experiment. Its task is the standalone trajectory reconstruction
  of the high multiplicities of charged particles originating from high-rate
  beam-target interactions. The silicon microstrip detectors must be
  radiation hard and are read out by a fast self triggering front-end electronics.
 
 The sensor technology used in STS is required to provide high track reconstruction
- efficiency as well as low material mass. Double-sided, 300 $\mu m$ thick
- microstrip sensor with a second metalization layer were chosen due to the fact that
- they yield the same space-point determination resolution using only half the amount
- of silicon material compared to single-sided sensors. The geometry design of STS
+ efficiency as well as low material mass. As a result, the double-sided, 300 $\mu m$ thick
+ microstrip sensor with a second metalization layer were chosen. The geometry design of STS
  sensor is illustrated in Fig. \ref{ywu:fig:sensor}. There are 1024 micro strips in
  each layer. Between the ''p'' and ''n'' side strip orientation of the sensor, there
  is a stereo angle of 7.5$^{\circ}$ in order to readout in one direction which reduce
@@ -106,20 +104,23 @@ The sensor technology used in STS is required to provide high track reconstructi
  and $6.2\times 12.4~cm^{2}$.
 
 %%%%%%%
-% Picture - QTC
+% Picture - Sensor
 %%%%%%%
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-sensor}
 	\caption{Segmentation of the micro-strip sensors (left), and prototype 
-		of a read-out sector (right)}
+		of a read-out sector (right).}
 	\label{ywu:fig:sensor}
 \end{figure}
 
 \subsection{Quality Test Center}
 % Motivation program of QA. Task and condition in QTC
-Due to a large-scale sensor production, the effective QA of sensors can be
- achieved by a collective effort among the Quality Test Centers built in GSI
+The STS will consist of eight planar tracking stations with about 1200 sensors.
+ And once a module has been built it can not be modified or repaired.
+ This is why QA for every component is very important before module assembly. 
+ Due to a large-scale sensor production, the effective QA of sensors can be
+ achieved by a collective effort among the Quality Test Centers, one of them is built in GSI
  cleanroom (see Fig. \ref{ywu:fig:qtc}). Fig. \ref{ywu:fig:qa} indicates the 
  variety of quality assurance tests and the corresponding QTC in charge. The
  overall QA program can be represented as a combination of tests performed on
@@ -131,17 +132,16 @@ Due to a large-scale sensor production, the effective QA of sensors can be
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-QTC}
-	\caption{General view of the Quality Test Center (QTC) in GSI cleanroom.}
+	\caption{General view of the Quality Test Center (QTC) in GSI cleanroom. \cite{ywu:pl}}
 	\label{ywu:fig:qtc}
 \end{figure}
 
 \section{Quality Assurance at GSI}
+\label{ywu:sec:qagsi}
 Quality assurance for silicon sensor includes visual tests on arrival, control and
 distribution to testing centers, verification of specifications via tests and central
 database for keeping track of sensor response.
 
-\subsection{Hardware and Setup}
-\label{ywu:sec:setup}
 % Testing and storage conditions, equipments and devices
 \begin{itemize}
 	\item S\"uss PA300PS probe station, featuring 1 $\mu m$ movement precision
@@ -173,8 +173,6 @@ database for keeping track of sensor response.
 	\label{ywu:fig:qa}
 \end{figure}
 
-\subsection{QA Procedures}
-
 \paragraph{Bulk electrical tests} are performed to determine the overall
 sensor behavior at the operational conditions. Current-voltage (I-V) and
 capacitance-voltage (C-V) tests are conducted after optical inspection. The
@@ -199,7 +197,7 @@ current.
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
 	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
-		test. Four probe needles contacts the neighboring AC or DC pads.}
+		test. Four probe needles contacts the neighboring AC or DC pads. \cite{ywu:pl}}
 	\label{ywu:fig:needle}
 \end{figure}
 
@@ -209,7 +207,7 @@ current.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-stsdb}
-	\caption{Quality assurance data scheme.}
+	\caption{Quality assurance data scheme. \cite{ywu:ob}}
 	\label{ywu:fig:stsdb}
 \end{figure}
 
@@ -291,7 +289,7 @@ The FairDB will be used to store a large number of sensor parameters. These info
  is used to make decision on defect severity in order to accept or reject a sensor under
  test for future use in STS detector. In order to extract the information on the strip
  properties, strip diagnostic tests will be performed. All of the parameters could be
- measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:setup}).
+ measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:qagsi}).
  For example, we can check the parameters with acceptance criteria which determines the
  strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
  of all the strip in a sensor's one side. It provides visual result and makes it more
@@ -328,17 +326,17 @@ I would like to express my gratitude to my tutor Olga Bertini and Anton Lymanets
 
 \begin{thebibliography}{99}
 
+%\cite{Heuser:2016coc}
+\bibitem{ywu:jh} 
+J.~M.~Heuser [CBM Collaboration], \textsl{Status of the Compressed Baryonic Matter
+	Experiment at FAIR and Its Silicon Tracking System},
+Acta Phys.\ Polon.\ Supp.\  {\bf 9}, 221 (2016).
+%%CITATION = doi:10.5506/APhysPolBSupp.9.221;%%
+
 \bibitem{ywu:pl}
 P. Larionov, \textsl{Systematic Irradiation Studies and Quality Assurance of
 Silicon Strip Sensors for the CBM Silicon Tracking System}, PhD thesis, Johann
 Wolfgang Goethe-Universit{\"a}t in Frankfurt am Main, 2016.
-
-%\cite{Heuser:2016coc}
-\bibitem{ywu:jh} 
-J.~M.~Heuser [CBM Collaboration], \textsl{Status of the Compressed Baryonic Matter
- Experiment at FAIR and Its Silicon Tracking System},
-Acta Phys.\ Polon.\ Supp.\  {\bf 9}, 221 (2016).
-%%CITATION = doi:10.5506/APhysPolBSupp.9.221;%%
 
 \bibitem{ywu:ob}
 O. Bertini etc., \textsl{Specifications for Quality Assurance of Microstrip
