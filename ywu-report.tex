@@ -75,16 +75,14 @@ The Compressed Baryonic Matter (CBM) experiment will carry out
 %%%%%%%
 % Picture - STS
 %%%%%%%
-%
-%\begin{figure}[htb]
-%	\centering
-%	\includegraphics[width=0.24\textwidth]{fig/ywu-STS}
-%	\includegraphics[width=0.24\textwidth]{fig/ywu-readout}
-%	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
-%		stations with the support frame (left) and a quarter station with
-%		ladders and FEE readout (right)}
-%	\label{ywu:fig:sts}
-%\end{figure}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-STS}
+	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
+		stations with the support frame (left) and a quarter station with
+		ladders and FEE readout (right)}
+	\label{ywu:fig:sts}
+\end{figure}
 
 \subsection{Silicon Tracking System}
 %Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
@@ -137,7 +135,12 @@ Due to a large-scale sensor production, the effective QA of sensors can be
 	\label{ywu:fig:qtc}
 \end{figure}
 
-\section{Hardware and Setup}
+\section{Quality Assurance at GSI}
+Quality assurance for silicon sensor includes visual tests on arrival, control and
+distribution to testing centers, verification of specifications via tests and central
+database for keeping track of sensor response.
+
+\subsection{Hardware and Setup}
 \label{ywu:sec:setup}
 % Testing and storage conditions, equipments and devices
 \begin{itemize}
@@ -170,25 +173,7 @@ Due to a large-scale sensor production, the effective QA of sensors can be
 	\label{ywu:fig:qa}
 \end{figure}
 
-\section{Quality Assurance in GSI}
-Quality assurance for silicon sensor includes visual tests on arrival, control and
-distribution to testing centers, verification of specifications via tests and central
-database for keeping track of sensor response.
-
-%%%%%%%
-% Picture - Optical surface scratch (defect)
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-defect}
-	\caption{Example detection of a scratch as seen in direct light source.}
-	\label{ywu:fig:defect}
-\end{figure}
-
-\paragraph{Optical inspection} is intended to identify any kinds of surface
-defects. This test will be performed on 100\% of the sensors at the EKU
-test center. Sensors with identified defects will undergo further electrical
-tests, such as Fig. \ref{ywu:fig:defect}.
+\subsection{QA Procedures}
 
 \paragraph{Bulk electrical tests} are performed to determine the overall
 sensor behavior at the operational conditions. Current-voltage (I-V) and
@@ -199,11 +184,6 @@ determines the full depletion voltage of a sensor.
 \paragraph{Long-term stability tests} will be performed on a fraction of the
 sensors. The leakage current of the sensors will be monitored for a time period
 of 48-72 hours in order to evaluate their stability.
-
-\paragraph{Microscopic electrical tests} focus on determination of various sensor
-parameters and their correspondence with specifications, mainly coupling
-capacitance $C_{c}$, interstrip capacitance $C_{is}$, interstrip resistance
-$R_{is}$, and bias resistance $R_{bias}$.
 
 \paragraph{Strip diagnostic tests} aim to identify strip defects originating
 from the complex fabrication process that cannot be identified by the optical
@@ -234,24 +214,24 @@ current.
 \end{figure}
 
 \section{QA Database}
-The CBM STS quality assurance (QA) database will gather into one repository
-all relevant measurements obtained during the STS sensors tests performed by
-the STS QA responsible laboratories. Any new or updated results will be stored
-in a dedicated database and can then be directly accessed form any location either
-a web interface or ROOT macro.
+The CBM STS quality assurance (QA) database will gather into one repository all relevant
+ measurements obtained during the STS sensors tests performed by the STS QA responsible
+ laboratories. Any new or updated results will be stored in a dedicated database and can
+ then be directly accessed form any location either a web interface or ROOT macro.
+
+A central database is also important for tracking the shipment of sensors and other
+ components between institutions during their lifetime. The FairDB data scheme contains,
+ among others, the tables and structures for these logistic purpose.   
 
 \subsection{Design}
 All new STS QA measurements as well as their history should be recorded. For this
-purpose the STS QA database is implemented using FairDB SQL Interface based on
-ROOT Library.
+ purpose the STS QA database is implemented using FairDB SQL Interface based on
+ ROOT Library.
 
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
-different lists of sensor features indexed via the sensor unique id (see 
-Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
-map and QA results \cite{ywu:ob}. For strip diagnostic tests, the information on 
-identified defect will be stored, which was shown in Tab. \ref{ywu:table:strip}. All 
-parameter classed are compatible with the FairRoot framework scheme and could be used 
-for the data analysis \cite{ywu:fr}.
+ different lists of sensor features indexed via the sensor unique id (see 
+ Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
+ map and QA results \cite{ywu:ob}. 
 
 %%%%%%%%
 % Table - Data scheme for strip test
@@ -298,10 +278,14 @@ for the data analysis \cite{ywu:fr}.
 	\label{ywu:table:strip} 
 \end{table}
 
-\subsection{Application}
-An implementation of the STS QA database and its web interface (Fig. \ref{ywu:fig:dbweb})
- based on FairDB is available now. It stores information on sensor parameters and quality
- assurance results as well ass tracking information for logistic purpose.
+\subsection{Implementation of Strip Test Table}
+An implementation of the STS QA database table for strip test based on FairDB is available
+ now. It stores information on sensor parameters and quality assurance results as well as
+ tracking information for logistic purpose.
+ 
+For strip diagnostic tests, the information on identified defect will be stored, which
+ was shown in Tab. \ref{ywu:table:strip}. All parameter classed are compatible with the
+ FairDB framework scheme and could be used for the data analysis \cite{ywu:fr}.
 
 The FairDB will be used to store a large number of sensor parameters. These information
  is used to make decision on defect severity in order to accept or reject a sensor under
@@ -312,10 +296,6 @@ The FairDB will be used to store a large number of sensor parameters. These info
  strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
  of all the strip in a sensor's one side. It provides visual result and makes it more
  intuitively to find defective strip.
- 
-A central database is also important for tracking the shipment of sensors and other components
- between institutions during their lifetime. The FairDB data scheme contains, among others,
- the tables and structures for these logistic purpose.   
 
 %%%%%%%
 % Picture - Result extracted from database, Pinhole
@@ -325,16 +305,6 @@ A central database is also important for tracking the shipment of sensors and ot
 	\includegraphics[width=0.45\textwidth]{fig/ywu-pinhole}
 	\caption{Pinhole scan of silicon microstrips, result extracted from database.}
 	\label{ywu:fig:pinhole}
-\end{figure}
-
-%%%%%%%
-% Picture - Data query with FairDB web interface
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-dbweb}
-	\caption{Snapshot of STS~QA web interface.}
-	\label{ywu:fig:dbweb}
 \end{figure}
 
 \section{Summary}
@@ -373,11 +343,6 @@ Acta Phys.\ Polon.\ Supp.\  {\bf 9}, 221 (2016).
 \bibitem{ywu:ob}
 O. Bertini etc., \textsl{Specifications for Quality Assurance of Microstrip
 	Sensors in the CBM Silicon Tracking System}, STS Note 2016-1, 2016
-
-\bibitem{ywu:fr}
-F.~Uhlig etc., \textsl{The FairRoot framework},
-J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 022001 (2012).
-%%CITATION = doi:10.1088/1742-6596/396/2/022001;%%
 
 \bibitem{ywu:db}
 D. Bertini. \textsl{FairRoot Virtual Database (User Manual)}. 2013
