@@ -208,6 +208,21 @@ current.
 	\label{ywu:fig:needle}
 \end{figure}
 
+\section{QA Database}
+An important part of the QA is the availability of all information concerning the sensors.
+ This includes not only test results form optical and electrical QA, but also information
+ on ordering and delivery of the sensors. In addition, the QA centers will keep track of
+ sensors which do not, or only partly, meet the specifications.
+
+The CBM STS quality assurance (QA) database will gather into one repository all relevant
+ measurements obtained during the STS sensors tests performed by the STS QA responsible
+ laboratories. Any new or updated results will be stored in a dedicated database and can
+ then be directly accessed form any location either a web interface or ROOT macro.
+
+A central database is also important for tracking the shipment of sensors and other
+ components between institutions during their lifetime. The FairDB data scheme contains,
+ among others, the tables and structures for these logistic purpose.   
+
 %%%%%%%
 % Picture - CBM STS data scheme
 %%%%%%%
@@ -218,23 +233,16 @@ current.
 	\label{ywu:fig:stsdb}
 \end{figure}
 
-\section{QA Database}
-The CBM STS quality assurance (QA) database will gather into one repository all relevant
- measurements obtained during the STS sensors tests performed by the STS QA responsible
- laboratories. Any new or updated results will be stored in a dedicated database and can
- then be directly accessed form any location either a web interface or ROOT macro.
-
-A central database is also important for tracking the shipment of sensors and other
- components between institutions during their lifetime. The FairDB data scheme contains,
- among others, the tables and structures for these logistic purpose.   
-
 \subsection{Design}
 All new STS QA measurements as well as their history should be recorded. For this
- purpose the STS QA database is implemented using FairDB SQL Interface based on
- ROOT Library.
+ purpose the STS QA database is implemented using FairDB based on ROOT Library.
+
+The FairDB will be used to store a large number of sensor parameters. These information
+is used to make decision on defect severity in order to accept or reject a sensor under
+test for future use in STS detector.
 
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
- different lists of sensor features indexed via the sensor unique id (see 
+ different lists of sensor features indexed via the sensor unique ID (see 
  Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
  map and QA results \cite{ywu:ob}. 
 
@@ -288,19 +296,18 @@ An implementation of the STS QA database table for strip test based on FairDB is
  now. It stores information on sensor parameters and quality assurance results as well as
  tracking information for logistic purpose.
  
-For strip diagnostic tests, the information on identified defect will be stored, which
+My task was to implement the database table for strip diagnostic tests. In current work,
+ the information on identified defect will be stored, which
  was shown in Tab. \ref{ywu:table:strip}. All parameter classed are compatible with the
- FairDB framework scheme and could be used for the data analysis \cite{ywu:fr}.
+ FairDB framework scheme and could be used for the data analysis.
 
-The FairDB will be used to store a large number of sensor parameters. These information
- is used to make decision on defect severity in order to accept or reject a sensor under
- test for future use in STS detector. In order to extract the information on the strip
+In order to extract the information on the strip
  properties, strip diagnostic tests will be performed. All of the parameters could be
  measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:qagsi}).
  For example, we can check the parameters with acceptance criteria which determines the
- strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test data
- of all the strip in a sensor's one side. It provides visual result and makes it more
- intuitively to find defective strip.
+ strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test result
+ of all the strip in a sensor's one side. It demonstrate that results in lab can vary from
+ that provided by the producer because defects can develop during storage and transportation. 
 
 %%%%%%%
 % Picture - Result extracted from database, Pinhole
