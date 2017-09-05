@@ -66,11 +66,11 @@
 The Compressed Baryonic Matter (CBM) experiment will carry out
  systematic research on the properties of nuclear matter under extreme conditions,
  in particular, at highest net baryon densities. These conditions will
- be met by colliding beams of heavy ions on targets in the energy range from
- 2 to 14, eventually 45 GeV/nucleon, as they will be provided with highest
+ be met by colliding beams of heavy ions  with targets in the energy range from
+ 2 to 14~GeV/nucleon, eventually 45~GeV/nucleon, as they will be provided with highest
  intensities by the heavy-ion synchrotron SIS-100, and in a future stage
  by the SIS-300 machine of the Facility for Anti-proton and Ion Research
- (FAIR) at GSI, Darmstadt, Germany.\cite{ywu:jh}
+ (FAIR) at GSI, Darmstadt, Germany~\cite{ywu:jh}.
 
 %%%%%%%
 % Picture - Sensor
@@ -78,27 +78,29 @@ The Compressed Baryonic Matter (CBM) experiment will carry out
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-sensor}
-	\caption{Segmentation of the micro-strip sensors (left), and prototype 
-		of a read-out sector (right).}
+	\caption{Strip topology of the microstrip sensors (left), and prototype 
+		of a readout sector with daisy-chained corner strips (right).}
 	\label{ywu:fig:sensor}
 \end{figure}
 
 %Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
 
-The Silicon Tracking System (STS) is the central detector fo the CBM
+The Silicon Tracking System (STS) is the central detector of the CBM
  experiment. Its task is the standalone trajectory and momentum reconstruction
- of the high multiplicities of charged particles originating from high-rate
+ of charged particles originating from high-rate and high-multiplicity
  beam-target interactions. The silicon microstrip detectors must be
- radiation hard and are read out by a fast self triggering front-end electronics.
+ radiation hard and are read out by  fast self-triggering front-end electronics.
 
-The sensor technology used in STS is required to provide high track reconstruction
+The sensor technology used in the STS is required to provide high track reconstruction
  efficiency as well as low material budget. As a result, the double-sided, 300 $\mu m$ thick
- microstrip sensor with a second metalization layer were chosen. The geometry design of STS
- sensor is illustrated in Fig. \ref{ywu:fig:sensor}. There are 1024 micro strips in
- each layer. Between the ''p'' and ''n'' side strip orientation of the sensor, there
- is a stereo angle of 7.5$^{\circ}$ in order to readout in one direction which reduce
- space for installation. For final design, a family of sensors will be employed, which
- are realized in four discrete sizes, $6.2\times 2.2,~6.2\times 4.2,~6.2\times 6.2$ 
+ microstrip sensor with a second metalization layer were chosen. There are 1024 microstrips per side.
+ Between the \emph{p}- and \emph{n}-side strip orientation of the sensor, there
+ is a stereo angle of 7.5$^{\circ}$ in order to readout the strips in one direction which reduces
+ space requirement for installation and enables modular design of the system. 
+ The geometry design of STS
+ sensor is illustrated in Fig.~\ref{ywu:fig:sensor}.
+ For final design, a family of sensors will be employed, which
+ are realized in four discrete sizes, $6.2\times 2.2~cm^{2},~6.2\times 4.2~cm^{2},~6.2\times 6.2~cm^{2}$ 
  and $6.2\times 12.4~cm^{2}$.
 
 %%%%%%%
@@ -107,21 +109,21 @@ The sensor technology used in STS is required to provide high track reconstructi
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-STS}
-	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
+	\caption{Conceptual design of CBM-STS, showing the tracking
 		stations with the support frame (left) and a half station with
-		ladders and FEE readout (right)}
+		ladders and FEE readout (right).}
 	\label{ywu:fig:sts}
 \end{figure}
 
 % Motivation program of QA. Task and condition in QTC
-The STS will consist of eight planar tracking stations with about 900 readout units
- (see Fig.\ref{ywu:fig:sts}), which is comprised of sensor, micro-cable
- and FEB (front-end board).
- Once a module has been built it can not be modified or repaired.
+The STS will consist of eight planar tracking stations with about 900 readout modules 
+ (see Fig.~\ref{ywu:fig:sts}). A module is comprised of a sensor, microcables
+ and a FEB (front-end board).
+ Once a module has been built, it can not be modified or repaired.
  This is why quality assurance (QA) for every component is very important before module assembly. 
  Due to a large-scale production, the effective QA of sensors can be
  achieved by a collective effort among the Quality Test Centers, one of them is built in GSI
- cleanroom (see Fig. \ref{ywu:fig:qtc}). Fig. \ref{ywu:fig:qa} indicates the 
+ clean room (see Fig.~\ref{ywu:fig:qtc}). Figure~\ref{ywu:fig:qa} indicates the 
  variety of quality assurance tests. The
  overall QA program can be represented as a combination of tests performed on
  sensor and strip level.
@@ -132,43 +134,43 @@ The STS will consist of eight planar tracking stations with about 900 readout un
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-QTC}
-	\caption{General view of the Quality Test Center (QTC) in GSI cleanroom. \cite{ywu:pl}}
+	\caption{General view of the Quality Test Center (QTC) in GSI clean room~\cite{ywu:pl}.}
 	\label{ywu:fig:qtc}
 \end{figure}
 
 \section{Quality Assurance at GSI}
 \label{ywu:sec:qagsi}
-Quality assurance for silicon sensor includes visual tests on arrival, control and
-distribution to testing centers, verification of specifications via tests and central
+Quality assurance of silicon sensor includes visual tests upon arrival, control and
+distribution to the testing centers, verification of specifications via tests and central
 database for keeping track of sensor response. To be able to perform the quality assurance
-program the following equipment is used:
+program, the following equipment is used:
 
 % Testing and storage conditions, equipments and devices
 \begin{itemize}
-	\item S\"uss PA300PS probe station, featuring 1 $\mu m$ movement precision
+	\item S\"uss PA300PS probe station, featuring 1~$\mu m$ movement precision
 	in XYZ direction and a chuck rotation option of $\pm 7.5^{\circ}$, is itself 
-	equipped with a ProberBench PC hosting the GUI operating system;
+	equipped with a PC with a ProberBench software;
 	
 	\item Keithley 2410 SourceMeter unit (SMU) providing high-voltage up to
 	$\pm$ 1100 V and current resolution of 10 pA;
 	
 	\item Keithley 6487 picoammeter/voltage source having a 2 nA - 20 mA current
-	range and a high-resolution voltage source up to 505 V;
+	range and a high-resolution voltage source up to 505~V;
 	
 	\item QuadTech 7600 precision LCR-meter with customized external biasing up to
-	500 V, wide frequency range from 100 Hz to 2 MHz, 0.05 \% measurement
+	500 V, wide frequency range from 100~Hz to 2~MHz, 0.05 \% measurement
 	accuracy, programmable test voltage and current;
 	
-	\item Keithley 708B switching matrix (multiplexer) mainframe with a high-voltage
+	\item Keithley 708B switching matrix mainframe with a high-voltage
 	(up to 1100 V) switching card (Keithley 7072-HV) for automation of the
 	measurements (discussed in Chapter 5).
 \end{itemize}
 
-All the equipments for characterization has to be installed in a clean room with
- temperature $21\pm 2^{\circ}C$ and humidity control. The clean room is ISO 4 or
+All the equipment for characterization has to be installed in a clean room with
+ temperature $21\pm 2~^{\circ}$C and humidity control. The clean room has ISO 4 class or
  better. Access to the testing area has to be limited. Protective clothing, masks
  and gloves must be worn by all personnel who handle sensors. The QA procedures
- which would be performed in clean room is listed as below:
+ which would be performed in the clean room are listed below:
 
 %%%%%%%
 % Picture - QA procedures
@@ -176,32 +178,32 @@ All the equipments for characterization has to be installed in a clean room with
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-qa}
-	\caption{Quality assurance procedures in GSI}
+	\caption{Quality assurance procedures at GSI.}
 	\label{ywu:fig:qa}
 \end{figure}
 
-\paragraph{Bulk electrical tests} are performed to determine the overall
+\textbf{Bulk electrical tests} are performed to determine the overall
 sensor behavior at the operational conditions. Current-voltage (I-V) and
 capacitance-voltage (C-V) tests are conducted after optical inspection. The
 I-V tests determines the leakage current of a sensor while the C-V tests
 determines the full depletion voltage of a sensor.
 
-\paragraph{Long-term stability tests} will be performed on a fraction of the
-sensors. The leakage current of the sensors will be monitored for a time period
-of 48-72 hours in order to evaluate their stability.
+\textbf{Long-term stability tests} will be performed on a fraction of the
+sensors. The leakage current of sensors will be monitored for a time period
+of 48-72 hours in order to evaluate its stability.
 
-\paragraph{Strip diagnostic tests} aim to identify strip defects originating
+\textbf{Strip diagnostic tests} aim to identify strip defects originating
 from the complex fabrication process that cannot be identified by the optical
 inspection. These defects comprise mainly ohmic contacts or short circuits
 between the strip implant and the readout strip (so-called ``pinholes''), short
 circuits between two or more readout strips, and strips exhibiting high leakage
-current. As shown in Fig. \ref{ywu:fig:needle}, probe needle 1 contacts with DC pad
-of the middle strip, and needle 2, 3, 4 contacts AC pads of neighboring strip respectively.
-In such setup, we could measure all the necessary parameters for strip test which
-are also listed in Tab. \ref{ywu:table:strip}. Strip leakage current can be measured
+current. As shown in Fig.~\ref{ywu:fig:needle}, probe needle 1 contacts with the DC pad
+of the middle strip, and needle 2, 3, 4 contacts the AC pads of the neighboring strips, respectively.
+In such a setup, we could measure all the necessary parameters for strip test which
+are also listed in Tab.~\ref{ywu:table:strip}. Strip leakage current can be measured
 with needle 1 directly. With needle 1 and 3, we can measured pinhole and coupling capacitance.
-The needle 2 or 4 should be used to test the short circuit between aluminum readout and silicon strip,
- incorporated with needle 3.  
+The needle 2 or 4 should be used to test the short circuit between aluminium (readout) strip
+ with respect to needle 3.  
 
 %%%%%%%
 % Picture - Probe needle setup
@@ -210,21 +212,21 @@ The needle 2 or 4 should be used to test the short circuit between aluminum read
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
 	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
-		test. Four probe needles contacts the neighboring AC or DC pads. \cite{ywu:pl}}
+		test. Four probe needles contact AC or DC pads of the neighboring strips~\cite{ywu:pl}.}
 	\label{ywu:fig:needle}
 \end{figure}
 
-Fig. \ref{ywu:fig:pinhole} shows the pinhole test result
-of all the strip in a sensor's one side. It demonstrate that results in lab can vary from
-that provided by the producer because defects can develop during storage and transportation. 
+Figure~\ref{ywu:fig:pinhole} shows the pinhole test result
+of all the strips on one side of a sensor. It demonstrates that results in the laboratory can vary from
+that provided by the manufacturer because some defects can develop during storage and transportation. 
 
 %%%%%%%
 % Picture - Result extracted from database, Pinhole
 %%%%%%%
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-pinhole}
-	\caption{Pinhole scan of silicon microstrips, result extracted from database.}
+	\includegraphics[width=0.48\textwidth]{fig/ywu-pinhole}
+	\caption{Pinhole map of silicon microstrips, result extracted from database.}
 	\label{ywu:fig:pinhole}
 \end{figure}
 
@@ -237,10 +239,10 @@ An important part of the QA is the availability of all information concerning th
 The CBM STS QA database will gather into one repository all relevant
  measurements obtained during the STS sensors tests performed by the STS QA responsible
  laboratories. All new STS QA measurements as well as their history should be recorded. For this
- purpose the STS QA database is implemented using FairDB based on ROOT Library.
- The data can then be directly accessed form any location either a web interface or ROOT macro.
- These information will be used to make decision on defect severity in order to accept 
- or reject a sensor under test for future use in STS detector.
+ purpose the STS QA database is implemented using FairDB based on ROOT Library~\cite{ywu:db}.
+ The data can then be directly accessed form any location using either a web interface or ROOT macro.
+ This information will be used to make decision on defect severity in order to accept 
+ or reject a sensor under test for future use in the STS detector.
  
 A central database is also important for tracking the shipment of sensors and other
  components between institutions during their lifetime.  
@@ -251,15 +253,15 @@ A central database is also important for tracking the shipment of sensors and ot
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-stsdb}
-	\caption{Quality assurance data scheme. \cite{ywu:ob}}
+	\caption{Quality assurance data scheme~\cite{ywu:ob}.}
 	\label{ywu:fig:stsdb}
 \end{figure}
 
 
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
  different lists of sensor features indexed via the sensor unique ID (see 
- Fig. \ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
- map and QA results \cite{ywu:ob}. 
+ Fig.~\ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
+ map and QA results~\cite{ywu:ob}. 
 
 %%%%%%%%
 % Table - Data scheme for strip test
@@ -274,7 +276,7 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 		unique ID    & Generated with sensor info\\
 		
 		\hline
-		edge & P or N side\\
+		edge & Top or bottom edge at a given sensor side\\
 		
 		\hline
 		strip ID & Numbering by rule, short strips included \\
@@ -283,26 +285,26 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 		I\_strip, A & Strip leakage current \\
 		
 		\hline
-		pinhole, A & Current between implant and aluminum readout line\\
+		pinhole, A & Current between implant and aluminum readout strip\\
 		
 		\hline
-		Al\_Short\_L, A & Current between this and its neighboring left strips\\
+		Al\_Short\_L, A & Current between a given strip and its neighboring left strip\\
 		
 		\hline
-		Al\_Short\_R, A & Current between this and its neighboring right strips \\
+		Al\_Short\_R, A & Current between a given strip and its neighboring right strip \\
 		
 		\hline
 		CCoupling\_Cp, F & Capacitance between AC and DC pad \\
 		
 		\hline
-		CCoupling\_DF, F & Deflection factor between AC and DC pad \\
+		CCoupling\_DF, F & Dissipation factor between AC and DC pad \\
 		
 		\hline
-		Passed, Boolean & Check parameters with acceptance criteria.\\
+		Passed, Boolean & Check parameters with acceptance criteria\\
 		
 		\hline
 	\end{tabular}
-	\caption{Strip test data scheme}
+	\caption{Strip test data scheme.}
 	\label{ywu:table:strip} 
 \end{table}
 
@@ -312,43 +314,43 @@ An implementation of the STS QA database table for strip test based on FairDB is
  tracking information for logistic purpose.
  
 My task was to implement the database table for strip diagnostic tests. In current work,
- the information on identified defect will be stored, which
- was shown in Tab. \ref{ywu:table:strip}. All parameter classed are compatible with the
+ the information on identified defects will be stored, which
+ is shown in Tab.~\ref{ywu:table:strip}. All parameter classes are compatible with the
  FairDB framework scheme and could be used for the data analysis.
 
 In order to extract the information on the strip
  properties, strip diagnostic tests will be performed. All of the parameters could be
- measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:qagsi}).
+ measured using probe station and devices in the clean room (see Sect.~\ref{ywu:sec:qagsi}).
 The results would be written in file which can be imported into the database. In the
 process of importing, the measurement parameters are compared with the acceptance criteria
- and a corresponding flag being set. A screenshot is shown in Fig. \ref{ywu:fig:dbstrip}. 
+ and a corresponding flag is being set. A screenshot is shown in Fig.~\ref{ywu:fig:dbstrip}. 
 
 %%%%%%%
 % Picture - SQLite3 data query
 %%%%%%%
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-dbstrip}
-	\caption{Data query in command-line SQLite3 at CBMPC041}
+	\includegraphics[width=0.5\textwidth]{fig/ywu-dbstrip}
+	\caption{Data query in SQLite3 command line at the database server.}
 	\label{ywu:fig:dbstrip}
 \end{figure}
 
 \section{Summary}
-In the two months study in GSI CBM-STS group, I have visited the lab and cleanroom in
- GSI, where my tutors showed me how to perform QA procedures with those professional
- equipments and devices. Then it takes me a lot of time to understand the design, principle
- and readout method of the silicon sensor. Furthermore, in order to take advantage of 
- the measurements data and extract more useful information, I have took a brief tutorial 
- about FairDB. With a fully configure STS database server,  I could practice all the 
+In the two months study in GSI CBM-STS group, I have visited the STS laboratory and clean room at
+ GSI, where my tutors showed me how to perform QA procedures with professional
+ equipment. Design, operation principle
+ and readout method of silicon sensors have been learned. Furthermore, in order to take advantage of 
+ the measured data and extract useful information, I have took a brief tutorial 
+ about FairDB. With a fully configured STS database server,  I could practice all the 
  operations and interfaces provided which helps me a lot to get familiar with FairDB. 
  
 \section*{Acknowledgments}
 I would like to express my gratitude to my tutor Olga Bertini and Anton Lymanets for given
- possibility to work on such important and interesting project. Then I thanks to the GSI
- CBM-STS group members for their assistance and parties during the program. Special sincerely 
+ possibility to work on such important and interesting project. Then I thank to the GSI
+ CBM-STS group members for their assistance and parties during the program. Special sincere 
  thanks to J{\"o}rn Knoll and all the GSI persons who contributed to ISSP. In the end, I really 
  benefit a lot from this experience, thanks to all the students who contributed to and 
- participated in such memorable summer.
+ participated in such a memorable summer.
 
 %Maksym Teklishyn, Hanna Malygina, Adrian Rodriguez Rodriguez, Ievgeniia Momot;
 
@@ -366,12 +368,13 @@ P. Larionov, \textsl{Systematic Irradiation Studies and Quality Assurance of
 Silicon Strip Sensors for the CBM Silicon Tracking System}, PhD thesis, Johann
 Wolfgang Goethe-Universit{\"a}t in Frankfurt am Main, 2016.
 
-\bibitem{ywu:ob}
-O. Bertini etc., \textsl{Specifications for Quality Assurance of Microstrip
-	Sensors in the CBM Silicon Tracking System}, STS Note 2016-1, 2016
-
 \bibitem{ywu:db}
-D. Bertini. \textsl{FairRoot Virtual Database (User Manual)}. 2013
+D. Bertini. \textsl{FairRoot Virtual Database (User Manual)}, 2013.
+
+\bibitem{ywu:ob}
+O. Bertini \emph{et al}., \textsl{Specifications for Quality Assurance of Microstrip
+	Sensors in the CBM Silicon Tracking System}, STS Note 2016-1, 2016.
+
 
 \end{thebibliography}
 
