@@ -234,14 +234,16 @@ An important part of the QA is the availability of all information concerning th
  on ordering and delivery of the sensors. In addition, the QA centers will keep track of
  sensors which do not, or only partly, meet the specifications.
 
-The CBM STS quality assurance (QA) database will gather into one repository all relevant
+The CBM STS QA database will gather into one repository all relevant
  measurements obtained during the STS sensors tests performed by the STS QA responsible
- laboratories. Any new or updated results will be stored in a dedicated database and can
- then be directly accessed form any location either a web interface or ROOT macro.
-
+ laboratories. All new STS QA measurements as well as their history should be recorded. For this
+ purpose the STS QA database is implemented using FairDB based on ROOT Library.
+ The data can then be directly accessed form any location either a web interface or ROOT macro.
+ These information will be used to make decision on defect severity in order to accept 
+ or reject a sensor under test for future use in STS detector.
+ 
 A central database is also important for tracking the shipment of sensors and other
- components between institutions during their lifetime. The FairDB data scheme contains,
- among others, the tables and structures for these logistic purpose.   
+ components between institutions during their lifetime.  
 
 %%%%%%%
 % Picture - CBM STS data scheme
@@ -253,13 +255,6 @@ A central database is also important for tracking the shipment of sensors and ot
 	\label{ywu:fig:stsdb}
 \end{figure}
 
-\subsection{Design}
-All new STS QA measurements as well as their history should be recorded. For this
- purpose the STS QA database is implemented using FairDB based on ROOT Library.
-
-The FairDB will be used to store a large number of sensor parameters. These information
-is used to make decision on defect severity in order to accept or reject a sensor under
-test for future use in STS detector.
 
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
  different lists of sensor features indexed via the sensor unique ID (see 
@@ -324,7 +319,19 @@ My task was to implement the database table for strip diagnostic tests. In curre
 In order to extract the information on the strip
  properties, strip diagnostic tests will be performed. All of the parameters could be
  measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:qagsi}).
- 
+The results would be written in file which can be imported into the database. In the
+process of importing, the measurement parameters are compared with the acceptance criteria
+ and a corresponding flag being set.
+
+%%%%%%%
+% Picture - SQLite3 data query
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-dbstrip}
+	\caption{Data query in command-line SQLite3 at CBMPC041}
+	\label{ywu:fig:dbstrip}
+\end{figure}
 
 \section{Summary}
 In the two months study in GSI CBM-STS group, I have visited the lab and cleanroom in
