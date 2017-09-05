@@ -73,37 +73,6 @@ The Compressed Baryonic Matter (CBM) experiment will carry out
  (FAIR) at GSI, Darmstadt, Germany.\cite{ywu:jh}
 
 %%%%%%%
-% Picture - STS
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-STS}
-	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
-		stations with the support frame (left) and a quarter station with
-		ladders and FEE readout (right)}
-	\label{ywu:fig:sts}
-\end{figure}
-
-\subsection{Silicon Tracking System}
-%Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
-
-The Silicon Tracking System (STS) is the central detector fo the CBM
- experiment. Its task is the standalone trajectory reconstruction
- of the high multiplicities of charged particles originating from high-rate
- beam-target interactions. The silicon microstrip detectors must be
- radiation hard and are read out by a fast self triggering front-end electronics.
-
-The sensor technology used in STS is required to provide high track reconstruction
- efficiency as well as low material mass. As a result, the double-sided, 300 $\mu m$ thick
- microstrip sensor with a second metalization layer were chosen. The geometry design of STS
- sensor is illustrated in Fig. \ref{ywu:fig:sensor}. There are 1024 micro strips in
- each layer. Between the ''p'' and ''n'' side strip orientation of the sensor, there
- is a stereo angle of 7.5$^{\circ}$ in order to readout in one direction which reduce
- space for installation. For final design, a family of sensors will be employed, which
- are realized in four discrete sizes, $6.2\times 2.2,~6.2\times 4.2,~6.2\times 6.2$ 
- and $6.2\times 12.4~cm^{2}$.
-
-%%%%%%%
 % Picture - Sensor
 %%%%%%%
 \begin{figure}[htb]
@@ -114,15 +83,46 @@ The sensor technology used in STS is required to provide high track reconstructi
 	\label{ywu:fig:sensor}
 \end{figure}
 
-\subsection{Quality Test Center}
+%Objective, Requirements, Design, Principle, Geometry, Readout, DAQ
+
+The Silicon Tracking System (STS) is the central detector fo the CBM
+ experiment. Its task is the standalone trajectory and momentum reconstruction
+ of the high multiplicities of charged particles originating from high-rate
+ beam-target interactions. The silicon microstrip detectors must be
+ radiation hard and are read out by a fast self triggering front-end electronics.
+
+The sensor technology used in STS is required to provide high track reconstruction
+ efficiency as well as low material budget. As a result, the double-sided, 300 $\mu m$ thick
+ microstrip sensor with a second metalization layer were chosen. The geometry design of STS
+ sensor is illustrated in Fig. \ref{ywu:fig:sensor}. There are 1024 micro strips in
+ each layer. Between the ''p'' and ''n'' side strip orientation of the sensor, there
+ is a stereo angle of 7.5$^{\circ}$ in order to readout in one direction which reduce
+ space for installation. For final design, a family of sensors will be employed, which
+ are realized in four discrete sizes, $6.2\times 2.2,~6.2\times 4.2,~6.2\times 6.2$ 
+ and $6.2\times 12.4~cm^{2}$.
+
+%%%%%%%
+% Picture - STS
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-STS}
+	\caption{Conceptual design of CBM-STS, showing the ensemble of eight
+		stations with the support frame (left) and a half station with
+		ladders and FEE readout (right)}
+	\label{ywu:fig:sts}
+\end{figure}
+
 % Motivation program of QA. Task and condition in QTC
-The STS will consist of eight planar tracking stations with about 1200 sensors.
- And once a module has been built it can not be modified or repaired.
- This is why QA for every component is very important before module assembly. 
- Due to a large-scale sensor production, the effective QA of sensors can be
+The STS will consist of eight planar tracking stations with about 900 readout units
+ (see Fig.\ref{ywu:fig:sts}), which is comprised of sensor, micro-cable
+ and FEB (front-end board).
+ Once a module has been built it can not be modified or repaired.
+ This is why quality assurance (QA) for every component is very important before module assembly. 
+ Due to a large-scale production, the effective QA of sensors can be
  achieved by a collective effort among the Quality Test Centers, one of them is built in GSI
  cleanroom (see Fig. \ref{ywu:fig:qtc}). Fig. \ref{ywu:fig:qa} indicates the 
- variety of quality assurance tests and the corresponding QTC in charge. The
+ variety of quality assurance tests. The
  overall QA program can be represented as a combination of tests performed on
  sensor and strip level.
 
