@@ -214,6 +214,20 @@ The needle 2 or 4 should be used to test the short circuit between aluminum read
 	\label{ywu:fig:needle}
 \end{figure}
 
+Fig. \ref{ywu:fig:pinhole} shows the pinhole test result
+of all the strip in a sensor's one side. It demonstrate that results in lab can vary from
+that provided by the producer because defects can develop during storage and transportation. 
+
+%%%%%%%
+% Picture - Result extracted from database, Pinhole
+%%%%%%%
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/ywu-pinhole}
+	\caption{Pinhole scan of silicon microstrips, result extracted from database.}
+	\label{ywu:fig:pinhole}
+\end{figure}
+
 \section{QA Database}
 An important part of the QA is the availability of all information concerning the sensors.
  This includes not only test results form optical and electrical QA, but also information
@@ -297,7 +311,7 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 	\label{ywu:table:strip} 
 \end{table}
 
-\subsection{Implementation of Strip Test Table}
+\section{Implementation of Strip Test Table}
 An implementation of the STS QA database table for strip test based on FairDB is available
  now. It stores information on sensor parameters and quality assurance results as well as
  tracking information for logistic purpose.
@@ -310,20 +324,7 @@ My task was to implement the database table for strip diagnostic tests. In curre
 In order to extract the information on the strip
  properties, strip diagnostic tests will be performed. All of the parameters could be
  measured using probe station and devices in cleanroom (see Sect. \ref{ywu:sec:qagsi}).
- For example, we can check the parameters with acceptance criteria which determines the
- strip would be connected or not. Fig. \ref{ywu:fig:pinhole} shows the pinhole test result
- of all the strip in a sensor's one side. It demonstrate that results in lab can vary from
- that provided by the producer because defects can develop during storage and transportation. 
-
-%%%%%%%
-% Picture - Result extracted from database, Pinhole
-%%%%%%%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{fig/ywu-pinhole}
-	\caption{Pinhole scan of silicon microstrips, result extracted from database.}
-	\label{ywu:fig:pinhole}
-\end{figure}
+ 
 
 \section{Summary}
 In the two months study in GSI CBM-STS group, I have visited the lab and cleanroom in
