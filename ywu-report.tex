@@ -39,9 +39,8 @@
 
 \title{Quality Assurance of silicon sensors for CBM-STS}
 
-\abstract{This report introduces CBM-STS detector and the Quality Test Center(QTC)
-	at GSI. It also details the hardwares for quality assurance as well as
-	the QA procedures, which include bulk electrical, long-term stability and strip diagnostic tests. 
+\abstract{This report introduces CBM-STS detector and the quality assurance of silicon mictrostrip sensor
+	at GSI. It also details the hardwares and procedures for quality assurance, which include bulk electrical, long-term stability and strip diagnostic tests. 
 	In addition, an example setup are given to explain how to measure the parameters with
 	the equipments.	The database framework for CBM-STS QA has been implemented using FairDB based on ROOT library, and QA data schemes would be shown in this report. In current work, a new table
 	for strip test is implemented and tested at the STS database server.}
@@ -151,18 +150,18 @@ program, the following equipment is used:
 	equipped with a PC with a ProberBench software;
 	
 	\item Keithley 2410 SourceMeter unit (SMU) providing high-voltage up to
-	$\pm$ 1100 V and current resolution of 10 pA;
+	$\pm$ 1100~V and current resolution of 10~pA;
 	
-	\item Keithley 6487 picoammeter/voltage source having a 2 nA - 20 mA current
+	\item Keithley 6487 picoammeter/voltage source having a 2~nA - 20~mA current
 	range and a high-resolution voltage source up to 505~V;
 	
 	\item QuadTech 7600 precision LCR-meter with customized external biasing up to
-	500 V, wide frequency range from 100~Hz to 2~MHz, 0.05 \% measurement
+	500 V, wide frequency range from 100~Hz to 2~MHz, 0.05~\% measurement
 	accuracy, programmable test voltage and current;
 	
 	\item Keithley 708B switching matrix mainframe with a high-voltage
-	(up to 1100 V) switching card (Keithley 7072-HV) for automation of the
-	measurements (discussed in Chapter 5).
+	(up to 1100~V) switching card (Keithley 7072-HV) for automation of the
+	measurements.
 \end{itemize}
 
 All the equipment for characterization has to be installed in a clean room with
@@ -184,8 +183,8 @@ All the equipment for characterization has to be installed in a clean room with
 \textbf{Bulk electrical tests} are performed to determine the overall
 sensor behavior at the operational conditions. Current-voltage (I-V) and
 capacitance-voltage (C-V) tests are conducted after optical inspection. The
-I-V tests determines the leakage current of a sensor while the C-V tests
-determines the full depletion voltage of a sensor.
+I-V tests determine the leakage current of a sensor while the C-V tests
+determine the full depletion voltage of a sensor.
 
 \textbf{Long-term stability tests} will be performed on a fraction of the
 sensors. The leakage current of sensors will be monitored for a time period
@@ -197,10 +196,10 @@ inspection. These defects comprise mainly ohmic contacts or short circuits
 between the strip implant and the readout strip (so-called ``pinholes''), short
 circuits between two or more readout strips, and strips exhibiting high leakage
 current. As shown in Fig.~\ref{ywu:fig:needle}, probe needle 1 contacts with the DC pad
-of the middle strip, and needle 2, 3, 4 contacts the AC pads of the neighboring strips, respectively.
+of the middle strip, and needle 2, 3, 4 contact the AC pads of the neighboring strips, respectively.
 In such a setup, we could measure all the necessary parameters for strip test which
 are also listed in Tab.~\ref{ywu:table:strip}. Strip leakage current can be measured
-with needle 1 directly. With needle 1 and 3, we can measured pinhole and coupling capacitance.
+with needle 1 directly. With needle 1 and 3, we can measure pinhole and coupling capacitance.
 The needle 2 or 4 should be used to test the short circuit between aluminium (readout) strip
  with respect to needle 3.  
 
@@ -211,7 +210,7 @@ The needle 2 or 4 should be used to test the short circuit between aluminium (re
 	\centering
 	\includegraphics[width=0.45\textwidth]{fig/ywu-needle}
 	\caption{Arrangement of the instruments for a multi-purpose strip diagnostic
-		test. Four probe needles contact AC or DC pads of the neighboring strips~\cite{ywu:pl}.}
+		test. Four probe needles contact AC or DC pads of the neighboring strips.}
 	\label{ywu:fig:needle}
 \end{figure}
 
@@ -235,11 +234,11 @@ An important part of the QA is the availability of all information concerning th
  on ordering and delivery of the sensors. In addition, the QA centers will keep track of
  sensors which do not, or only partly, meet the specifications.
 
-The CBM STS QA database will gather into one repository all relevant
+The CBM-STS QA database will gather into one repository all relevant
  measurements obtained during the STS sensors tests performed by the STS QA responsible
  laboratories. All new STS QA measurements as well as their history should be recorded. For this
  purpose the STS QA database is implemented using FairDB based on ROOT Library~\cite{ywu:db}.
- The data can then be directly accessed form any location using either a web interface or ROOT macro.
+ The data can then be directly accessed from any location using either a web interface or ROOT macro.
  This information will be used to make decision on defect severity in order to accept 
  or reject a sensor under test for future use in the STS detector.
  
@@ -259,7 +258,7 @@ A central database is also important for tracking the shipment of sensors and ot
 
 A main sensor table is mapped to a ROOT based QA parameter manager which holds
  different lists of sensor features indexed via the sensor unique ID (see 
- Fig.~\ref{ywu:fig:stsdb}). The feature include sensor geometry, ownership, channel
+ Fig.~\ref{ywu:fig:stsdb}). The feature includes sensor geometry, ownership, channel
  map and QA results~\cite{ywu:ob}. 
 
 %%%%%%%%
@@ -331,7 +330,7 @@ process of importing, the measurement parameters are compared with the acceptanc
 \end{figure}
 
 \section{Summary}
-In the two months study in GSI CBM-STS group, I have visited the STS laboratory and clean room at
+In the two months of study at GSI CBM-STS group, I have visited the STS laboratory and clean room at
  GSI, where my tutors showed me how to perform QA procedures with professional
  equipment. Design, operation principle
  and readout method of silicon sensors have been learned. Furthermore, in order to take advantage of 
