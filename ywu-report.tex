@@ -273,19 +273,19 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 		\textbf{Strip table} & \textbf{Description} \\
 		
 		\hline
-		unique ID    & Generated with sensor info\\
+		Unique ID    & Generated with sensor info\\
 		
 		\hline
-		edge & Top or bottom edge at a given sensor side\\
+		Edge & Top or bottom edge at a given sensor side\\
 		
 		\hline
-		strip ID & Numbering by rule, short strips included \\
+		Strip ID & Numbering by rule, short strips included \\
 		
 		\hline
 		I\_strip, A & Strip leakage current \\
 		
 		\hline
-		pinhole, A & Current between implant and aluminum readout strip\\
+		Pinhole, A & Current between implant and aluminum readout strip\\
 		
 		\hline
 		Al\_Short\_L, A & Current between a given strip and its neighboring left strip\\
@@ -309,10 +309,6 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 \end{table}
 
 \section{Implementation of Strip Test Table}
-An implementation of the STS QA database table for strip test based on FairDB is available
- now. It stores information on sensor parameters and quality assurance results as well as
- tracking information for logistic purpose.
- 
 My task was to implement the database table for strip diagnostic tests. In current work,
  the information on identified defects will be stored, which
  is shown in Tab.~\ref{ywu:table:strip}. All parameter classes are compatible with the
