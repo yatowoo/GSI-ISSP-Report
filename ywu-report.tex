@@ -37,10 +37,10 @@
 % repeated as often as necessary. Footnotes in titles, adresses and the abstract
 % need a special procedure and are described below.
 
-\title{Quality Assurance of silicon sensors for CBM-STS}
+\title{Quality assurance of silicon sensors for CBM-STS}
 
 \abstract{This report introduces CBM-STS detector and the quality assurance of silicon mictrostrip sensor
-	at GSI. It also details the hardwares and procedures for quality assurance, which include bulk electrical, long-term stability and strip diagnostic tests. 
+	at GSI. It also details the hardware and procedures for quality assurance, which include bulk electrical, long-term stability and strip diagnostic tests. 
 	In addition, an example setup are given to explain how to measure the parameters with
 	the equipments.	The database framework for CBM-STS QA has been implemented using FairDB based on ROOT library, and QA data schemes would be shown in this report. In current work, a new table
 	for strip test is implemented and tested at the STS database server.}
@@ -115,12 +115,12 @@ The sensor technology used in the STS is required to provide high track reconstr
 
 % Motivation program of QA. Task and condition in QTC
 The STS will consist of eight planar tracking stations with about 900 readout modules 
- (see Fig.~\ref{ywu:fig:sts}). A module is comprised of a sensor, microcables
+ (see Fig.~\ref{ywu:fig:sts}). A module is comprised of a sensor, micro-cables
  and a FEB (front-end board).
  Once a module has been built, it can not be modified or repaired.
  This is why quality assurance (QA) for every component is very important before module assembly. 
  Due to a large-scale production, the effective QA of sensors can be
- achieved by a collective effort among the Quality Test Centers, one of them is built in GSI
+ achieved by a collective effort among the Quality Test Centres, one of them is built in GSI
  clean room (see Fig.~\ref{ywu:fig:qtc}). Figure~\ref{ywu:fig:qa} indicates the 
  variety of quality assurance tests. The
  overall QA program can be represented as a combination of tests performed on
@@ -139,7 +139,7 @@ The STS will consist of eight planar tracking stations with about 900 readout mo
 \section{Quality Assurance at GSI}
 \label{ywu:sec:qagsi}
 Quality assurance of silicon sensor includes visual tests upon arrival, control and
-distribution to the testing centers, verification of specifications via tests and central
+distribution to the testing centres, verification of specifications via tests and central
 database for keeping track of sensor response. To be able to perform the quality assurance
 program, the following equipment is used:
 
@@ -181,7 +181,7 @@ All the equipment for characterization has to be installed in a clean room with
 \end{figure}
 
 \textbf{Bulk electrical tests} are performed to determine the overall
-sensor behavior at the operational conditions. Current-voltage (I-V) and
+sensor behaviour at the operational conditions. Current-voltage (I-V) and
 capacitance-voltage (C-V) tests are conducted after optical inspection. The
 I-V tests determine the leakage current of a sensor while the C-V tests
 determine the full depletion voltage of a sensor.
@@ -231,7 +231,7 @@ that provided by the manufacturer because some defects can develop during storag
 \section{QA Database}
 An important part of the QA is the availability of all information concerning the sensors.
  This includes not only test results form optical and electrical QA, but also information
- on ordering and delivery of the sensors. In addition, the QA centers will keep track of
+ on ordering and delivery of the sensors. In addition, the QA centres will keep track of
  sensors which do not, or only partly, meet the specifications.
 
 The CBM-STS QA database will gather into one repository all relevant
@@ -286,10 +286,10 @@ A main sensor table is mapped to a ROOT based QA parameter manager which holds
 		Pinhole, A & Current between implant and aluminium readout strip\\
 		
 		\hline
-		Al\_Short\_L, A & Current between a given strip and its neighboring left strip\\
+		Al\_Short\_L, A & Current between a given strip and its neighbouring left strip\\
 		
 		\hline
-		Al\_Short\_R, A & Current between a given strip and its neighboring right strip \\
+		Al\_Short\_R, A & Current between a given strip and its neighbouring right strip \\
 		
 		\hline
 		CCoupling\_Cp, F & Capacitance between AC and DC pad \\
@@ -338,7 +338,7 @@ In the two months of study at GSI CBM-STS group, I have visited the STS laborato
  about FairDB. With a fully configured STS database server,  I could practice all the 
  operations and interfaces provided which helps me a lot to get familiar with FairDB. 
  
-\section*{Acknowledgments}
+\section*{Acknowledgements}
 I would like to express my gratitude to my tutor Olga Bertini and Anton Lymanets for given
  possibility to work on such important and interesting project. Then I thank to the GSI
  CBM-STS group members for their assistance and parties during the program. Special sincere 
